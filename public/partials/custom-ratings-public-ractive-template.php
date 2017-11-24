@@ -47,9 +47,7 @@
 	<script id='wpcr__ratings-vote-template' type='text/ractive'>
 		<section>
 			<!-- This is used to add consistent spacing at the top and bottom of the custom ratings component -->
-			<p aria-hidden="true" style="<?php echo $top_border_style_string; ?>" >&nbsp;</p>
-			<h3><?php _e($intro_text, 'custom-rating' ); ?></h3>
-			
+
 			<div class="wpcr__star-rating-section" >
 				{{#if wpcr_data.status == 'voted' }}
 					<p>
@@ -130,16 +128,7 @@
 					<p class="wpcr__report-section__status" > <span class="fa fa-check wpcr__report-section__icon--voted" aria-hidden="true" ></span>  <?php _e($thank_you_text, 'custom-rating'); ?></p>
 				{{else}}
 					<p class="wpcr__report-section__status" aria-hidden="true" >&nbsp;</p>
-				{{/if}}
-				<p class="wpcr__report-section__report" >
-					{{#if parseInt(wpcr_data.rating_total) > 0 }}
-						{{{render_report_text(wpcr_data.rating_avg, wpcr_data.rating_total)}}}
-					{{else}}
-						<?php _e($first_vote_text, 'custom-rating'); ?>
-					{{/if}}
-				</p>
-				<!-- This is used to add consistent spacing at the top and bottom of the custom ratings component -->
-				<p aria-hidden="true" style="<?php echo $bottom_border_style_string; ?>"  >&nbsp;</p>				
+				{{/if}}			
 			</div>
 		</section> 
 	</script> 
