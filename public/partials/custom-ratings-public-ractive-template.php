@@ -127,7 +127,6 @@
 				{{elseif wpcr_data.status == 'voted' }}
 					<p class="wpcr__report-section__status" > <span class="fa fa-check wpcr__report-section__icon--voted" aria-hidden="true" ></span>  <?php _e($thank_you_text, 'custom-rating'); ?></p>
 				{{else}}
-					<p class="wpcr__report-section__status" aria-hidden="true" >&nbsp;</p>
 				{{/if}}			
 			</div>
 		</section> 
